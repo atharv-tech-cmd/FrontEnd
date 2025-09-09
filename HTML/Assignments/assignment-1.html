@@ -1,49 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal CV Webpage using HTML and Inline CSS</title>
-    <style>
-    table {
-        margin-top: 40px;
-      width: 100%;
-      border-collapse: collapse;
-      text-align: center;
-      background-color: #f2f2f2;
-    }
-    th, td {
-      border: 1px solid #333;
-      padding: 8px;
-    }
-    th {
-      background-color: #f2f2f2;
-    }
-    caption {
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal CV Webpage using HTML and Inline CSS</title>
+  <style>
 
+.timetable-section {
+  padding: 30px;
+  background: linear-gradient(120deg, #f1f8ff, #ffffff);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow-x: auto;
+  margin: 20px auto;
+  max-width: 95%;
+}
+
+.timetable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+}
+
+
+.timetable caption {
+  font-size: 1.4rem;
+  font-weight: bold;
+  background: #ffecb3;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 3px solid #f9c74f;
+  color: #333;
+}
+
+.timetable thead th {
+  background: #0d47a1;
+  color: white;
+  padding: 12px;
+  font-size: 0.9rem;
+  border: 1px solid #ddd;
+}
+
+
+.timetable tbody th {
+  background: #e3f2fd;
+  color: #0d47a1;
+  padding: 12px;
+  font-weight: 600;
+  border: 1px solid #ddd;
+}
+
+
+.timetable td {
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  font-size: 0.85rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.timetable tbody tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+
+.timetable tbody td:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
+}
+
+
+.cse { background: #e3f2fd; color: #0d47a1; }
+.physics { background: #e8f5e9; color: #1b5e20; }
+.english { background: #fff3e0; color: #e65100; }
+.elective { background: #f3e5f5; color: #6a1b9a; }
+.lab { background: #ede7f6; color: #311b92; }
+
+
+.timetable tfoot td {
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+  background: #f5f5f5;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #333;
+  border-top: 3px solid #ddd;
+}
+      
+@media (max-width: 768px) {
+  .timetable caption {
+    font-size: 1rem;
+  }
+  .timetable thead th, .timetable td, .timetable th {
+    padding: 8px;
+    font-size: 0.75rem;
+  }
+}
   </style>
-
 </head>
-<body style="background-color:#e3f2fd;" >
+<body style="background-color:#e3f2fd;">
 
- 
-    <header style="background-color:#bbdefb; padding:20px;">
-     
-        <h1 style="text-align: center; color:blue; margin:0;"> Atharv Verma </h1> 
-        
-       
-        <h3 style="text-align: center; color:#0d47a1; margin-top:8px;"> Aspiring Frontend Developer </h3>
-        
-        <div style="text-align: center; margin-top:10px;">
-            <img style="border-radius:50%;" height="200" width="200" src="assignment-1.jpg" alt="atharv-profile">
-        </div>
-    </header>
+<header style="background-color:#bbdefb; padding:20px;">
+  <h1 style="text-align: center; color:blue; margin:0;"> Atharv Verma </h1> 
+  <h3 style="text-align: center; color:#0d47a1; margin-top:8px;"> Aspiring Frontend Developer </h3>
+  <div style="text-align: center; margin-top:10px;">
+    <img style="border-radius:50%;" height="200" width="200" src="assignment-1.jpg" alt="atharv-profile">
+  </div>
+</header>
 
-    <main>
-
+<main>
 
 <section style="padding:15px; text-align:center; font-family:Arial, sans-serif; background-color:#e8f5e9;">
   <h3 style="text-align:center; color:#0d47a1; margin-top:0;">Contact Me</h3>
@@ -53,10 +124,8 @@
     <li style="margin:6px 0; color:#555;">
       🔗 <a href="https://www.linkedin.com/feed/" 
              style="color:#0d47a1; text-decoration:none;" 
-             target="_blank">
-             LinkedIn Profile
-          </a><br>
-     🔗 <a style="text-decoration: none; color:#0d47a1;" href="https://github.com/atharv-tech-cmd" target="_blank"> Github Profile </a>   
+             target="_blank">LinkedIn Profile</a><br>
+      🔗 <a style="text-decoration: none; color:#0d47a1;" href="https://github.com/atharv-tech-cmd" target="_blank"> Github Profile </a>   
     </li>
   </ul>
 </section>
@@ -74,22 +143,21 @@
   </p>
 </section>
 
-
 <section style="padding:15px; background-color:#e1f5fe;">
-    <h3 style="text-align: center; color: #1565c0;">Education Section </h3>
-   <table style="border:1px solid black; border-collapse:collapse; 
-width:80%; margin: 0 auto; text-align: center;"> 
-  <tr> 
-    <th style="border:1px solid black; padding:8px;">Year</th> 
-    <th style="border:1px solid black; padding:8px;">Degree</th> 
-    <th style="border:1px solid black; padding:8px;">Institute</th> 
-  </tr> 
-  <tr> 
-    <td style="border:1px solid black; padding:8px;">2024</td> 
-    <td style="border:1px solid black; padding:8px;">B.Tech in CSE</td> 
-    <td style="border:1px solid black; padding:8px;"> GLA University Mathura </td> 
-  </tr> 
-</table>
+  <h3 style="text-align: center; color: #1565c0;">Education Section </h3>
+  <table style="border:1px solid black; border-collapse:collapse; 
+  width:80%; margin: 0 auto; text-align: center;"> 
+    <tr> 
+      <th style="border:1px solid black; padding:8px;">Year</th> 
+      <th style="border:1px solid black; padding:8px;">Degree</th> 
+      <th style="border:1px solid black; padding:8px;">Institute</th> 
+    </tr> 
+    <tr> 
+      <td style="border:1px solid black; padding:8px;">2024</td> 
+      <td style="border:1px solid black; padding:8px;">B.Tech in CSE</td> 
+      <td style="border:1px solid black; padding:8px;"> GLA University Mathura </td> 
+    </tr> 
+  </table>
 </section>
 
 <section style="padding:15px; background-color:#f3e5f5;">
@@ -104,15 +172,12 @@ width:80%; margin: 0 auto; text-align: center;">
   </ul>
 </section>
 
-
 <section style="padding:15px; background-color:#f1f8e9;">
   <h3 style="text-align:center; color: #0d47a1;">Projects</h3>
-
   <div style="border:1px solid black; padding:10px; margin:10px; border-radius:8px; background-color:#f9f9f9;">
     <h4>Personal Portfolio Website</h4>
     <p>Designed and developed a personal portfolio website using HTML, CSS, and JavaScript.</p>
   </div>
-
   <div style="border:1px solid black; padding:10px; margin:10px; border-radius:8px; background-color:#f9f9f9;">
     <h4>Library Management System</h4>
     <p>Created a Java-based project with SQL database integration to manage books and students.</p>
@@ -129,9 +194,11 @@ width:80%; margin: 0 auto; text-align: center;">
   </ul>
 </section>
 
-    </main><section>
-        <table>
-    <caption style="background-color: antiquewhite; padding: 10px 0px;">Time Table: Odd Semester Programme | Section: 2FD | Semester: III</caption>
+</main>
+
+<section class="timetable-section">
+  <table class="timetable">
+    <caption>Time Table: Odd Semester Programme | Section: 2FD | Semester: III</caption>
     <thead>
       <tr>
         <th>Lecture #</th>
@@ -150,100 +217,81 @@ width:80%; margin: 0 auto; text-align: center;">
     <tbody>
       <tr>
         <th>Monday</th>
-        <td>BCSC1003<br>ABVIII-411</td>
+        <td class="cse">BCSC1003<br>ABVIII-411</td>
         <td></td>
-        <td>PCPH0001<br>ABVIII-411</td>
+        <td class="physics">PCPH0001<br>ABVIII-411</td>
         <td></td>
-        <td>BCSC1003<br>ABVIII-411</td>
-        <td>BELH3003<br>ABVIII-411</td>
-        <td>BCSC1005<br>ABVIII-411</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td class="cse">BCSC1003<br>ABVIII-411</td>
+        <td class="english">BELH3003<br>ABVIII-411</td>
+        <td class="cse">BCSC1005<br>ABVIII-411</td>
+        <td></td><td></td><td></td>
       </tr>
       <tr>
         <th>Tuesday</th>
-        <td>BCSC1003<br>ABVIII-411</td>
-        <td>BCSC1010<br>ABVIII-411</td>
-        <td>BCSC1005<br>ABVIII-411</td>
+        <td class="cse">BCSC1003<br>ABVIII-411</td>
+        <td class="cse">BCSC1010<br>ABVIII-411</td>
+        <td class="cse">BCSC1005<br>ABVIII-411</td>
         <td></td>
-        <td>BCSC1003<br>ABVIII-411</td>
-        <td>BELH3003<br>ABVIII-411</td>
-        <td>BCSE0031<br>ABVIII-411</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td class="cse">BCSC1003<br>ABVIII-411</td>
+        <td class="english">BELH3003<br>ABVIII-411</td>
+        <td class="elective">BCSE0031<br>ABVIII-411</td>
+        <td></td><td></td><td></td>
       </tr>
       <tr>
         <th>Wednesday</th>
-        <td>BCSC1010<br>ABVIII-410</td>
-        <td>2FD3/BCSC101<br>LABC ABVIII-410</td>
-        <td colspan="2">
+        <td class="cse">BCSC1010<br>ABVIII-410</td>
+        <td class="lab">2FD3/BCSC101<br>LABC ABVIII-410</td>
+        <td class="lab" colspan="2">
           2FD1/BCSC0802/ABI-204<br>
           2FD2/BCSC0802/ABI-205<br>
           2FD3/BCSC0802/ABI-205
         </td>
-        <td>BCSC1003<br>ABVIII-411</td>
-        <td>2FD1/BCSC1010<br>ABVIII-411</td>
-        <td>2FD1/BELH3003 ABVIII-411<br>
-            2FD2/BELH3003 ABVIII-410
-        </td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td class="cse">BCSC1003<br>ABVIII-411</td>
+        <td class="cse">2FD1/BCSC1010<br>ABVIII-411</td>
+        <td class="english">2FD1/BELH3003 ABVIII-411<br>2FD2/BELH3003 ABVIII-410</td>
+        <td></td><td></td><td></td>
       </tr>
       <tr>
         <th>Thursday</th>
-        <td colspan="2">
+        <td class="lab" colspan="2">
           2FD1/BCSC0804/ABI-5002<br>
           2FD2/BCSC0804/ABI-5004<br>
           2FD3/BCSC0504/ABI-5005
         </td>
         <td></td>
-        <td>BCSE0831<br>ABVIII-410</td>
-        <td>BCSE0031<br>ABVIII-411</td>
-        <td>BCSC1005<br>ABVIII-411</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td class="elective">BCSE0831<br>ABVIII-410</td>
+        <td class="elective">BCSE0031<br>ABVIII-411</td>
+        <td class="cse">BCSC1005<br>ABVIII-411</td>
+        <td></td><td></td><td></td><td></td>
       </tr>
       <tr>
         <th>Friday</th>
-        <td></td>
-        <td></td>
-        <td>BCSC1010<br>ABVIII-411</td>
-        <td>BCSE0031<br>ABVIII-411</td>
-        <td>BCSC0801<br>ABVIII-404</td>
-        <td colspan="2">
+        <td></td><td></td>
+        <td class="cse">BCSC1010<br>ABVIII-411</td>
+        <td class="elective">BCSE0031<br>ABVIII-411</td>
+        <td class="cse">BCSC0801<br>ABVIII-404</td>
+        <td class="english" colspan="2">
           2FD1/BELH3003 ABVIII-411<br>
           2FD2/BELH3003 ABVIII-406
         </td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td></td><td></td><td></td>
       </tr>
       <tr>
         <th>Saturday</th>
         <td colspan="10"></td>
       </tr>
     </tbody>
-
     <tfoot>
-    <tr>
-      <td colspan="20" style="text-align: center; font-weight: bold; padding: 15px; background-color: #f2f2f2;" >
-        Total Study Hours | 35 Hours | 2025-2026
-      </td>
-    </tr>
-  </tfoot>
+      <tr>
+        <td colspan="20">Total Study Hours | 35 Hours | 2025-2026</td>
+      </tr>
+    </tfoot>
   </table>
-    </section>
-    
-    
+</section>
 
 <footer style="background-color:#f2f2f2; padding:12px; margin-top:20px;">
-   <p style="text-align:center; color:#555;">&copy; 2025 Atharv Verma | All Rights Reserved</p>
+  <p style="text-align:center; color:#555;">&copy; 2025 Atharv Verma | All Rights Reserved</p>
 </footer>
--
+
 </body>
 </html>
