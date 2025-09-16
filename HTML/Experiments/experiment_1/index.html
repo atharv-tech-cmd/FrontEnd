@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal CV Webpage using HTML and Inline CSS</title>
   <style>
-
+/* 🔹 Timetable Section */
 .timetable-section {
   padding: 30px;
   background: linear-gradient(120deg, #f1f8ff, #ffffff);
@@ -26,7 +26,7 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-
+/* Caption */
 .timetable caption {
   font-size: 1.4rem;
   font-weight: bold;
@@ -37,6 +37,7 @@
   color: #333;
 }
 
+/* Table Header */
 .timetable thead th {
   background: #0d47a1;
   color: white;
@@ -45,7 +46,7 @@
   border: 1px solid #ddd;
 }
 
-
+/* Days Column */
 .timetable tbody th {
   background: #e3f2fd;
   color: #0d47a1;
@@ -54,7 +55,7 @@
   border: 1px solid #ddd;
 }
 
-
+/* General Cell */
 .timetable td {
   padding: 12px;
   border: 1px solid #e0e0e0;
@@ -62,11 +63,12 @@
   transition: background 0.3s, transform 0.2s;
 }
 
+/* Alternate Rows */
 .timetable tbody tr:nth-child(even) td {
   background: #fafafa;
 }
 
-
+/* Hover Effect */
 .timetable tbody td:hover {
   transform: scale(1.05);
   cursor: pointer;
@@ -74,14 +76,14 @@
   box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
 }
 
-
+/* 🔹 Subject-wise Colors */
 .cse { background: #e3f2fd; color: #0d47a1; }
 .physics { background: #e8f5e9; color: #1b5e20; }
 .english { background: #fff3e0; color: #e65100; }
 .elective { background: #f3e5f5; color: #6a1b9a; }
 .lab { background: #ede7f6; color: #311b92; }
 
-
+/* Footer */
 .timetable tfoot td {
   text-align: center;
   font-weight: bold;
@@ -92,7 +94,8 @@
   color: #333;
   border-top: 3px solid #ddd;
 }
-      
+
+/* Responsive */
 @media (max-width: 768px) {
   .timetable caption {
     font-size: 1rem;
@@ -196,6 +199,7 @@
 
 </main>
 
+<!-- 🔹 Modern Timetable -->
 <section class="timetable-section">
   <table class="timetable">
     <caption>Time Table: Odd Semester Programme | Section: 2FD | Semester: III</caption>
